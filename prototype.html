@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prototype</title>
+</head>
+<body>
+<script>
+
+    //Object dari constructor function
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function(name) {
+            console.log(`Hello ${name}, my Name is ${this.firstName}`);
+        };
+
+    }
+
+    Person.prototype.sayBye = function() {
+      console.info(`Good Bye!`);
+    }
+
+    Person.prototype.run = function() {
+      console.info(`${this.firstName} is running`);
+    }
+
+    const iko = new Person("Iko", "Afianando");
+    iko.sayBye = function() {
+      console.info("Sampai Jumpa");
+    }
+    const budi = new Person("Budi", "Nugraha");
+
+    console.log(iko);
+    console.log(budi);
+
+    iko.sayBye();
+    iko.run();
+
+</script>
+</body>
+</html>

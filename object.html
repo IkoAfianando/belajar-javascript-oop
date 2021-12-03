@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object</title>
+</head>
+<body>
+<script>
+
+    //Object dari constructor function
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function(name) {
+            console.log(`Hello ${name}, my Name is ${this.firstName}`);
+        };
+
+    }
+
+    const iko = new Person("Iko", "Afianando");
+    iko.sayHello("Joko");
+
+    const budi = new Person("Budi", "Nugraha");
+    budi.sayHello("Joko");
+
+    console.log(iko);
+    console.log(budi);
+
+</script>
+</body>
+</html>
