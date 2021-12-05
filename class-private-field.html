@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Private Field</title>
+</head>
+<body>
+<script>
+
+    class Counter {
+        // contoh penggunaan private field
+        #counter = 0;
+
+        increment() {
+            this.#counter++;
+        }
+
+        dicrement() {
+            this.#counter--;
+        }
+
+        get() {
+            return this.#counter;
+        }
+
+    }
+
+    const counter = new Counter();
+
+    counter.increment();
+    counter.increment();
+    counter.increment();
+    counter.increment();
+    counter.increment();
+
+    console.info(counter.get());
+    counter.counter = 100;
+    console.log(counter);
+</script>
+</body>
+</html>

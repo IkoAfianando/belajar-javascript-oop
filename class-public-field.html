@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Public Field</title>
+</head>
+<body>
+<script>
+
+    class Customer {
+        firstName;
+        lastName;
+        balance = 0;
+
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        sayHello() {
+            return `${this.firstName} ${this.lastName}`;
+
+        }
+
+    }
+
+    const iko = new Customer("Iko", "Afianando");
+    console.log(iko.sayHello());
+    console.log(iko);
+</script>
+</body>
+</html>
